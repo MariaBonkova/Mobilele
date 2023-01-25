@@ -1,14 +1,12 @@
-package com.example.mobilelele.model.entities;
-
+package com.example.mobilelele.model.Dto.modelDto;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import org.hibernate.annotations.GenericGenerator;
 
-
 @MappedSuperclass
-public abstract class BaseEntity {
+public class BaseModelDto {
 
     @Id
     @GeneratedValue(generator = "uuid-string")
@@ -17,15 +15,17 @@ public abstract class BaseEntity {
 
     private String id;
 
-    public BaseEntity() {
+    public BaseModelDto() {
     }
 
     public String getId() {
         return id;
     }
 
-    public BaseEntity setId(String id) {
+    public BaseModelDto setId(String id) {
         this.id = id;
         return this;
     }
+
+
 }
